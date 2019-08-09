@@ -13,4 +13,6 @@ public interface UserService {
 
 	List<User> getAllUsers();
 
+	Boolean checkUser(Long id);
+
 }
