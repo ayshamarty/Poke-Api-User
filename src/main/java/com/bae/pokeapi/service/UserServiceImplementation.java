@@ -18,13 +18,18 @@ public class UserServiceImplementation implements UserService {
 
 	@Override
 	public User createUser(User user) {
-		System.out.println(user.getUsername());
 		return repository.save(user);
 	}
 
 	@Override
 	public List<User> getAllUsers() {
 		return repository.findAll();
+	}
+
+	@Override
+	public Boolean checkUser(Long id) {
+
+		return repository.findById(id).isPresent();
 	}
 
 }
