@@ -43,4 +43,9 @@ public class UserController {
 		return new ResponseEntity<>(service.checkUser(id), HttpStatus.OK);
 	}
 
+	@GetMapping("/getOne/{id}")
+	public ResponseEntity<User> getOne(@PathVariable Long id) {
+		return new ResponseEntity<>(service.getOne(id), HttpStatus.OK);
+	}
+
 }

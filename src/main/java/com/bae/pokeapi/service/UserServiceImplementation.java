@@ -32,4 +32,9 @@ public class UserServiceImplementation implements UserService {
 		return repository.findById(id).isPresent();
 	}
 
+	@Override
+	public User getOne(Long id) {
+		return repository.findById(id).get();
+	}
+
 }

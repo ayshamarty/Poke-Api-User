@@ -15,4 +15,6 @@ public interface UserService {
 
 	Boolean checkUser(Long id);
 
+	User getOne(Long id);
+
 }
